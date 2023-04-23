@@ -878,6 +878,10 @@ margin-left: auto;
   
 }
 
+.portfolio-item:not(:last-child) {
+    margin-bottom: 48px;
+}
+
 .portfolio-link {
     display: block;
 
