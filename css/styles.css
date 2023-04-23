@@ -355,10 +355,6 @@ color: #FFFFFF;
   margin-bottom: 8px;
 }
 
-.icon-studio {
-  /* display: block;  */
-}
-
 .doing-list {
   display: flex;
     gap: 24px;
@@ -525,10 +521,6 @@ display: flex;
   background-color: var(--button-text-color);
 
   transition: transform var(--time-and-cubic);
-}
-
-.text-overlay {
-  
 }
 
 .portfolio-link:hover .overlay {

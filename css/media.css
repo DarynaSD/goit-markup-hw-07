@@ -80,10 +80,17 @@ margin-left: auto;
     color: var(--button-text-color);
 }
 
+.nav .logo {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
 .footer .logo {
-    @media screen and (max-width: 767px) {
         display: block;
         text-align: center;
+    
+    @media screen and (min-width: 768px) {
+        text-align: left;
     }
 }
 
@@ -104,12 +111,6 @@ margin-left: auto;
 
 /* logo and nav */
 
-.container.header-wrap {
-@media screen and (max-width: 767px) {
-    display: none;
-}
-}
-
 .nav,
 .header-wrap {
     display: flex;
@@ -117,11 +118,15 @@ margin-left: auto;
 }
 
 .header-list {
+    display: none;
+
+@media screen and (min-width: 768px) {
     display: flex;
     gap: 40px;
-
     margin-left: 76px;
+    }
 }
+
 
 .header-item {
     position: relative;
@@ -173,6 +178,11 @@ margin-left: auto;
 }
 
 .address-list {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: block;
+    }
 
     @media screen and (min-width: 1440px) {
         display: flex;
@@ -182,15 +192,18 @@ margin-left: auto;
 }
 
 .address-item {
-    @media screen and (max-width: 1439px) {
+
+    @media screen and (max-width: 1440px) {
             display: block;
             text-align: right;
         }
 }
 
 .address-item:not(:last-child) {
-    @media screen and (max-width: 1439px) {
-        margin-bottom: 12px;
+    margin-bottom: 12px;
+
+    @media screen and (min-width: 1440px) {
+        margin-bottom: 0;
     }
 }
 
@@ -210,6 +223,29 @@ margin-left: auto;
     color: #404bbf;
 }
 
+/* HEADER - MOBILE MENU */
+
+.menu-open {
+    display: block;
+    background-color: transparent;
+    border: none;
+    padding: 24px 0;
+    margin: 0;
+    cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.menu-open-icon {
+    stroke: #2E2F42;
+    transition: stroke var(--time-and-cubic);
+}
+
+.menu-open:is(:hover, :focus) .menu-open-icon {
+    stroke: var(--button-text-color);
+}
 
 /* HERO SECTION */
 
@@ -353,10 +389,6 @@ padding-bottom: 96px;
     border-radius: 4px;
     margin-bottom: 8px;
 }
-}
-
-.icon-studio {
-    /* display: block;  */
 }
 
 .text-head {
@@ -604,14 +636,12 @@ padding-bottom: 96px;
     width: 268px;
     margin-left: auto;
     margin-right: auto;
-
-    @media screen and (max-width: 767px) {
-        margin-bottom: 72px;
-    }
+    margin-bottom: 72px;
 
     @media screen and (min-width: 768px) {
     width: 264px;
     margin-left: 0;
+    margin-bottom: 0px;
     }
 }
 
@@ -626,13 +656,11 @@ padding-bottom: 96px;
     width: 208px;
     margin-left: auto;
     margin-right: auto;
-
-    @media screen and (max-width: 767px) {
-        margin-bottom: 72px;
-    }
+    margin-bottom: 72px;
 
     @media screen and (min-width: 768px) {
        margin-left: 24px;
+    margin-bottom: 0;
     }
 
     @media screen and (min-width: 1440px) {
@@ -642,9 +670,11 @@ padding-bottom: 96px;
 }
 
 .media-header {
-    @media screen and (max-width: 767px) {
-            display: block;
-            text-align: center;
+    display: block;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+            text-align: unset;
         }
 
     font-weight: 500;
@@ -695,38 +725,39 @@ padding-bottom: 96px;
 /* third part - subscribe-container */
 
 .subscribe-container {
-@media screen and (min-width: 768px) and (max-width: 1439px) {
+@media screen and (min-width: 768px) {
     margin-top: 72px;
 }
 
 @media screen and (min-width: 1440px) {
 margin-left: auto;
+margin-top: 0;
 }
 
 }
 
 .form-wrap {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 16px;
 
-@media screen and (max-width: 767px) {
-    flex-wrap: wrap;
+@media screen and (min-width: 768px) {
+    flex-wrap: nowrap;
 }
 }
 
 .subscribe-container input {
-@media screen and (max-width: 767px) {
     width: 100%;
-}
-
-    box-sizing: border-box;
-    width: 264px;
     background-color: transparent;
     padding: 8px 16px;
     border: 1px solid #FFFFFF;
     border-radius: 4px;
     color: #FFFFFF;
+
+@media screen and (min-width: 768px) {
+    width: 264px;
+}
 }
 
 .subscribe-container input::placeholder {
@@ -735,12 +766,13 @@ margin-left: auto;
 }
 
 .submit-button {
-@media screen and (max-width: 767px) {
-    margin: 16px auto 0;
+margin: 16px auto 0;
+
+@media screen and (min-width: 768px) {
+    margin: 0 0 0 24px;
 }
 
     display: flex;
-    margin: 0 0 0 24px;
     align-items: center;
     padding: 8px 24px;
     min-width: 165px;
@@ -928,8 +960,6 @@ margin-left: auto;
 
     transition: transform var(--time-and-cubic);
 }
-
-.text-overlay {}
 
 .portfolio-link:hover .overlay {
     transform: translateY(-100%);
