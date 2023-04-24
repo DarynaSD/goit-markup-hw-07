@@ -28,23 +28,19 @@
           <a href="./index.html" class="link logo">
             Web<span class="logo-studio">Studio</span>
           </a>
-          <ul class="list header-list">
+          <ul class="header-list">
             <li class="header-item">
               <a href="./index.html" class="link nav-text">Studio</a>
             </li>
             <li class="header-item">
-              <a href="./portfolio.html" class="link nav-text current"
-                >Portfolio</a
-              >
+              <a href="./portfolio.html" class="link nav-text current">Portfolio</a>
             </li>
-            <li class="header-item">
-              <a href="" class="link nav-text">Contacts</a>
-            </li>
+            <li><a href="" class="link nav-text">Contacts</a></li>
           </ul>
         </nav>
 
         <address class="address">
-          <ul class="list address-list">
+          <ul class="address-list">
             <li class="address-item">
               <a href="mailto:info@devstudio.com" class="link address-text"
                 >info@devstudio.com</a
@@ -57,6 +53,85 @@
             </li>
           </ul>
         </address>
+        <!-- кнопка відкривання - бургер -->
+        <button type="button" data-menu-open class="menu-open">
+          <svg class="menu-open-icon" width="32px" height="22px">
+            <use href="./images/icons.svg#icon-menu-hamburger"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- mobile menu -->
+      <div class="mobile-menu is-hidden" data-menu>
+        <div class="top-part">
+          <button type="button" data-menu-close class="menu-close">
+            <svg class="menu-close-icon" width="8px" height="8px">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+
+          <nav class="menu-nav">
+            <ul class="menu-header-list">
+              <li class="menu-header-item">
+                <a href="./index.html" class="link menu-nav-text">Studio</a>
+              </li>
+              <li>
+                <a href="./portfolio.html" class="link menu-nav-text menu-current"
+                  >Portfolio</a
+                >
+              </li>
+              <li><a href="" class="link menu-nav-text">Contacts</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="bottom-part">
+          <address class="menu-address">
+            <ul class="menu-address-list">
+              <li class="menu-tel">
+                <a href="tel:+110001111111" class="link menu-tel-text">
+                  +11 (000) 111-11-11</a
+                >
+              </li>
+
+              <li class="menu-email">
+                <a href="mailto:info@devstudio.com" class="link menu-email-text"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+
+          <ul class="menu-icon-list list">
+            <li class="menu-icon-item">
+              <a href="" class="menu-icon-link">
+                <svg class="menu-icon-svg" width="24px" height="24px">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="menu-icon-item">
+              <a href="" class="menu-icon-link">
+                <svg class="menu-icon-svg" width="24px" height="24px">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="menu-icon-item">
+              <a href="" class="menu-icon-link">
+                <svg class="menu-icon-svg" width="24px" height="24px">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="menu-icon-item">
+              <a href="" class="menu-icon-link">
+                <svg class="menu-icon-svg" width="24px" height="24px">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -96,7 +171,9 @@
                 </div>
 
                 <div class="portfolio-list-wrap">
-                  <h2 class="portfolio-text-head">Banking App Interface Concept</h2>
+                  <h2 class="portfolio-text-head">
+                    Banking App Interface Concept
+                  </h2>
                   <p class="main-text text-color">App</p>
                 </div>
               </a>
@@ -369,5 +446,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
