@@ -38,6 +38,7 @@
     background-color: #ffffff;
 
     @media screen and (min-width: 768px) {
+        width: 408px;
         padding: 72px 24px 24px 24px;
     }
 
@@ -49,43 +50,39 @@
 }
 
 .modal-button {
+display: flex;
+    justify-content: center;
+    align-items: center;
+
     position: absolute;
     top: 24px;
     right: 24px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* margin-left: auto;
+    margin-bottom: 32px; */
+
     width: 24px;
     height: 24px;
 
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: #E7E9FC;
 
     cursor: pointer;
-
-    background-color: #E7E9FC;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 0;
-    margin: 0;
-    border-radius: 50%;
-
-    fill: #2e2f42;
-
-    transition: background-color var(--time-and-cubic),
-        border var(--time-and-cubic),
-        color var(--time-and-cubic);
+    transition: background-color var(--time-and-cubic);
 }
 
 
 .icon-close {
-    display: block;
-    padding: 8px;
-    fill: currentColor;
+transition: fill var(--time-and-cubic);
 }
 
-.modal-button:hover {
+.modal-button:is(:hover, :focus) {
     background-color: var(--active-button-bg);
-    border: 1px solid var(--active-button-bg);
-    color: #ffffff;
+}
+
+.modal-button:is(:hover, :focus) .icon-close {
+    fill: #ffffff;
 }
 
 /* Стилі форм */
