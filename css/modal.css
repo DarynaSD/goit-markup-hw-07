@@ -25,7 +25,6 @@
 
 /* коли модалка показана */
 .modal {
-    box-sizing: border-box;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -33,17 +32,20 @@
 
     padding: 72px 16px 24px 16px;
 
-    width: 392px;
+    /* max-width: 392px; */
     border-radius: 4px;
     background-color: #ffffff;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 428px) {
+        max-width: unset;
         width: 408px;
         padding: 72px 24px 24px 24px;
     }
 
     @media screen and (max-width: 428px) {
-        width: 80vw;
+        width: 85vw;
+        height: 95vh;
+        overflow: scroll;
     }
 
     transition: transform var(--time-and-cubic);

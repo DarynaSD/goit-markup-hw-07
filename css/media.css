@@ -356,6 +356,10 @@ fill: #ffffff;
     @media screen and (max-width: 420px) {
         font-size: 26px; }
 
+    @media screen and (max-width: 320px) {
+        font-size: 18px;
+    }
+
     transition: color var(--time-and-cubic);
     
 }
@@ -386,9 +390,10 @@ display: flex;
 justify-content: flex-start;
 gap: 56px;
 
-    @media screen and (max-width: 420px) {
-            gap: 30px;
-        }
+@media screen and (max-width: 392px) {
+    gap: 0;
+    justify-content: space-between;
+    }
 }
 
 .menu-icon-item {
